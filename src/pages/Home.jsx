@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import {
-  Phone, Mail, MapPin, Menu, X, Globe, ChevronRight,
-  CheckCircle, Users, Award, BookOpen, Send, Star
-} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, Globe, Send, Users, Award, BookOpen, CheckCircle, Star, Phone, Mail, MapPin, Plane } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', phone: '', service: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -33,149 +31,182 @@ const Home = () => {
         <meta property="og:description" content="Karnal's most trusted visa and immigration experts. Start your global journey with us today." />
         <meta property="og:type" content="website" />
       </Helmet>
-      {/* Top Bar */}
-      <div className="bg-primary text-white py-2 text-sm hidden md:block">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex space-x-6">
-            <span className="flex items-center"><Phone size={14} className="mr-2" /> +91 83980 93616</span>
-            <span className="flex items-center"><Mail size={14} className="mr-2" /> info@rrinstitutekarnal.com</span>
-          </div>
-          <div className="flex space-x-4">
-            <span className="flex items-center"><MapPin size={14} className="mr-2" /> Opp. Civil Hospital, Karnal</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center">
-            {/* Logo Placeholder */}
-            <div className="text-2xl font-bold text-primary flex items-center">
-              <Globe className="mr-2" size={32} />
-              <span>RR Institute</span>
-            </div>
-          </div>
-
-          <div className="hidden md:flex space-x-8 font-medium text-gray-700">
-            <a href="#" className="hover:text-primary transition">Home</a>
-            <a href="#" className="hover:text-primary transition">About Us</a>
-            <a href="#" className="hover:text-primary transition">Services</a>
-            <a href="#" className="hover:text-primary transition">Visa</a>
-            <a href="#" className="hover:text-primary transition">Contact</a>
-          </div>
-
-          <div className="hidden md:block">
-            <button className="bg-secondary text-white px-6 py-2 rounded-md hover:bg-red-600 transition">
-              Book Consultation
-            </button>
-          </div>
-
-          <button
-            className="md:hidden text-gray-700"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 py-4 px-4 flex flex-col space-y-4">
-            <a href="#" className="block hover:text-primary font-medium">Home</a>
-            <a href="#" className="block hover:text-primary font-medium">About Us</a>
-            <a href="#" className="block hover:text-primary font-medium">Services</a>
-            <a href="#" className="block hover:text-primary font-medium">Visa</a>
-            <a href="#" className="block hover:text-primary font-medium">Contact</a>
-            <button className="bg-secondary text-white px-4 py-2 rounded-md hover:bg-red-600 transition w-full">
-              Book Consultation
-            </button>
-          </div>
-        )}
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <div className="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
+      <div className="relative bg-gray-950 text-white py-24 md:py-32 overflow-hidden">
         {/* Background Elements */}
+        {/* Hero Section Background - Dark Theme */}
         <div className="absolute inset-0 z-0">
           {/* Base Image with Animation */}
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.4 }}
-            transition={{ duration: 1.5 }}
+            animate={{ scale: 1.05, opacity: 0.25 }}
+            transition={{ duration: 2 }}
             className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544654803-b69110bb8151?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"
           />
 
-          {/* Layered Skewed Accents */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-transparent z-10"></div>
+          {/* Layered Deep Gradients & Skewed Accents */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900/90 to-primary/20 z-10"></div>
 
           <motion.div
             initial={{ x: '100%', skewX: -12 }}
-            animate={{ x: '45%', skewX: -12 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute top-0 right-0 w-full h-full bg-secondary/10 transform origin-right z-20"
+            animate={{ x: '40%', skewX: -12 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute top-0 right-0 w-[60%] h-full bg-secondary/5 transform origin-right z-20"
           ></motion.div>
 
           <motion.div
             initial={{ x: '100%', skewX: -24 }}
-            animate={{ x: '65%', skewX: -24 }}
-            transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
-            className="absolute top-0 right-0 w-full h-full bg-primary/40 backdrop-blur-sm transform origin-right z-20 border-l border-white/10"
+            animate={{ x: '50%', skewX: -24 }}
+            transition={{ duration: 1.7, ease: "easeOut", delay: 0.2 }}
+            className="absolute top-0 right-0 w-full h-full bg-primary/10 backdrop-blur-md transform origin-right z-20 border-l border-white/5"
           ></motion.div>
 
-          {/* Floating Light Blobs */}
+          {/* Enhanced Glowing Blobs */}
           <motion.div
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.6, 0.3]
+              y: [0, -40, 0],
+              scale: [1, 1.1, 1],
+              opacity: [0.2, 0.4, 0.2]
             }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] z-10"
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px] z-10"
+          ></motion.div>
+          <motion.div
+            animate={{
+              y: [0, 50, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[100px] z-10"
           ></motion.div>
         </div>
 
         <div className="container mx-auto px-4 relative z-30">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="max-w-4xl"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Content Column */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
-              <span className="text-sm font-bold tracking-widest uppercase">Karnal's Most Trusted Institute</span>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8"
+              >
+                <span className="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                <span className="text-sm font-bold tracking-widest uppercase">Karnal's Most Trusted Institute</span>
+              </motion.div>
+
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-[1.1]">
+                Your Gateway to a <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-red-400 to-yellow-400">Global Future</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-12 text-blue-100 leading-relaxed font-light max-w-2xl">
+                Expert guidance for Study Visas, Immigration, and Career Counseling. We transform your aspirations into international success stories with 99% visa approval rate.
+              </p>
+              <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-8">
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(239 68 68 / 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-secondary text-white px-12 py-5 rounded-full text-xl font-bold shadow-2xl shadow-red-500/30 hover:bg-red-600 transition-all duration-300 flex items-center justify-center group"
+                >
+                  Start Your Journey
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,1)", color: "#1E3A8A" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white px-12 py-5 rounded-full text-xl font-bold transition-all duration-300"
+                >
+                  Explore Services
+                </motion.button>
+              </div>
             </motion.div>
 
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[1.1]">
-              Your Gateway to a <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-red-400 to-yellow-400">Global Future</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-12 text-blue-100 leading-relaxed font-light max-w-2xl">
-              Expert guidance for Study Visas, Immigration, and Career Counseling. We transform your aspirations into international success stories with 99% visa approval rate.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-8">
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(239 68 68 / 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-secondary text-white px-12 py-5 rounded-full text-xl font-bold shadow-2xl shadow-red-500/30 hover:bg-red-600 transition-all duration-300 flex items-center justify-center group"
-              >
-                Start Your Journey
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,1)", color: "#1E3A8A" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white px-12 py-5 rounded-full text-xl font-bold transition-all duration-300"
-              >
-                Explore Services
-              </motion.button>
+            {/* Right Animation Column */}
+            <div className="hidden lg:flex justify-center relative h-[700px] lg:h-[800px] w-full">
+              {/* Circular Orbit Container */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Central Circle with Image */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  className="relative z-20 w-80 h-80 rounded-full border-8 border-white/10 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Travel"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 to-transparent"></div>
+                </motion.div>
+
+                {/* Single Orbit (Dashed Line) */}
+                <div
+                  className="absolute border border-dashed border-white/20 rounded-full"
+                  style={{
+                    width: `${400 * 1.5}px`,
+                    height: `${400 * 1.5}px`
+                  }}
+                />
+
+                {/* Orbiting Items (Flags & Planes) */}
+                {[
+                  { type: 'flag', content: '🇬🇧', angle: 0 },
+                  { type: 'plane', angle: 45 },
+                  { type: 'flag', content: '🇩🇪', angle: 90 },
+                  { type: 'plane', angle: 135 },
+                  { type: 'flag', content: '🇺🇸', angle: 180 },
+                  { type: 'plane', angle: 225 },
+                  { type: 'flag', content: '🇲🇹', angle: 270 },
+                  { type: 'plane', angle: 315 },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    animate={{ rotate: [item.angle, item.angle + 360] }}
+                    transition={{
+                      duration: 35,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute pointer-events-none"
+                    style={{
+                      width: `${400 * 1.5}px`,
+                      height: `${400 * 1.5}px`,
+                    }}
+                  >
+                    <div
+                      className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    >
+                      {item.type === 'flag' ? (
+                        <motion.div
+                          animate={{ rotate: [-(item.angle), -(item.angle + 360)] }}
+                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                          className="bg-white p-2 rounded-full shadow-xl border border-white/10 flex items-center justify-center w-12 h-12 text-2xl"
+                        >
+                          {item.content}
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          animate={{ rotate: [-(item.angle), -(item.angle + 360)] }}
+                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                          className="bg-primary/20 backdrop-blur-sm p-3 rounded-full border border-white/10"
+                        >
+                          <Plane size={24} className="text-secondary -rotate-45" />
+                        </motion.div>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -408,7 +439,7 @@ const Home = () => {
                   <div className="bg-white/10 p-3 rounded-xl"><Mail className="text-secondary" /></div>
                   <div>
                     <div className="text-sm text-blue-200">Email Us</div>
-                    <div className="text-xl font-bold">info@rrinstitutekarnal.com</div>
+                    <div className="text-xl font-bold">info@rrinstitute.in</div>
                   </div>
                 </div>
               </div>
@@ -514,69 +545,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 mb-16">
-            <div className="col-span-1 md:col-span-1">
-              <div className="text-3xl font-bold text-white mb-8 flex items-center">
-                <Globe className="mr-3 text-secondary" size={36} /> RR Institute
-              </div>
-              <p className="text-lg leading-relaxed mb-8">
-                Empowering dreams through professional immigration and study abroad consultancy. Your success is our ultimate mission.
-              </p>
-              <div className="flex space-x-4">
-                {['facebook', 'twitter', 'instagram', 'linkedin'].map(social => (
-                  <a key={social} href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all">
-                    <span className="sr-only">{social}</span>
-                    <Globe size={18} />
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-white mb-8 border-b-2 border-secondary w-fit pb-2">Our Services</h4>
-              <ul className="space-y-4 text-lg">
-                <li><a href="#" className="hover:text-secondary transition-colors">Study Visa</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">PR & Immigration</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">IELTS/PTE Training</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Tourist Visa</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Business Visa</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-white mb-8 border-b-2 border-secondary w-fit pb-2">Quick Links</h4>
-              <ul className="space-y-4 text-lg">
-                <li><a href="#" className="hover:text-secondary transition-colors">About RR Institute</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Success Stories</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Latest News</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-white mb-8 border-b-2 border-secondary w-fit pb-2">Get in Touch</h4>
-              <ul className="space-y-6 text-lg">
-                <li className="flex items-start">
-                  <MapPin size={24} className="mr-4 text-secondary shrink-0 mt-1" />
-                  <span>Opp. Civil Hospital, Above Chawla Clinical Lab, 2nd Floor, Karnal, Haryana 132001</span>
-                </li>
-                <li className="flex items-center">
-                  <Phone size={24} className="mr-4 text-secondary shrink-0" />
-                  <span>+91 83980 93616</span>
-                </li>
-                <li className="flex items-center">
-                  <Mail size={24} className="mr-4 text-secondary shrink-0" />
-                  <span className="break-all">info@rrinstitutekarnal.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-10 text-center text-gray-500">
-            <p>&copy; {new Date().getFullYear()} RR Institute Karnal. Designed with excellence for your future.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

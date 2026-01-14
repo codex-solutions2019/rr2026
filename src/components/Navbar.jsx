@@ -23,12 +23,12 @@ const Navbar = () => {
             {/* Navigation */}
             <nav className="bg-white shadow-md sticky top-0 z-50">
                 <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-                    <Link to="/" className="relative z-[70] -mt-2">
-                        <div className="bg-white rounded-full p-1 shadow-xl border-4 border-white transform hover:scale-105 transition-transform duration-300">
+                    <Link to="/" className="relative w-24 h-12 md:w-36 flex items-center">
+                        <div className="md:h-36 h-24 md:w-36 w-24 absolute -top-2 left-0 border border-slate-300 p-1 md:p-2 bg-white rounded-full shadow-2xl z-[70] transform hover:scale-105 transition-transform duration-300">
                             <img
                                 src="/logo.png"
                                 alt="RR Institute Logo"
-                                className="h-20 w-20 md:h-28 md:w-28 rounded-full object-cover"
+                                className="w-full h-full rounded-full object-cover"
                             />
                         </div>
                     </Link>

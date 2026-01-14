@@ -47,8 +47,13 @@ const Visa = () => {
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>Visa Guidance | RR Institute Karnal - Study Abroad Specialists</title>
-                <meta name="description" content="Expert visa guidance for Canada, UK, Australia, USA, and Europe. RR Institute Karnal ensures 99% success rate for your visa application." />
+                <title>Visa Information | RR Institute Karnal - Study & Work Abroad</title>
+                <meta name="description" content="Detailed information about Study Visas, Tourist Visas, and Permanent Residency for Canada, UK, USA, Australia, and more." />
+                <meta property="og:title" content="Visa Information | RR Institute Karnal" />
+                <meta property="og:description" content="Get the latest visa rules and processes for top study destinations." />
+                <meta property="og:url" content="https://rrinstitute.in/visa" />
+                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
+                <link rel="canonical" href="https://rrinstitute.in/visa" />
             </Helmet>
 
             <Navbar />

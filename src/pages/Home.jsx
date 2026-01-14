@@ -25,11 +25,61 @@ const Home = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
       <Helmet>
         <title>RR Institute Karnal | Expert Immigration & Visa Consultants</title>
-        <meta name="description" content="RR Institute Karnal - Your trusted partner for Study Visas, Immigration, PR, and IELTS/PTE coaching in Karnal. 99% success rate in visa approvals." />
-        <meta name="keywords" content="Immigration consultants Karnal, Study Visa Canada, Best IELTS coaching Karnal, PTE coaching Haryana, PR Australia, RR Institute Karnal contact number" />
+        <meta name="description" content="RR Institute Karnal - Your trusted partner for Study Visas, Immigration, PR, and IELTS/PTE coaching in Karnal. 99% success rate in visa approvals. Book a free consultation today!" />
+        <meta name="keywords" content="Immigration consultants Karnal, Study Visa Canada, Best IELTS coaching Karnal, PTE coaching Haryana, PR Australia, RR Institute Karnal contact number, study abroad consultants" />
         <meta property="og:title" content="RR Institute Karnal | Expert Immigration & Visa Consultants" />
         <meta property="og:description" content="Karnal's most trusted visa and immigration experts. Start your global journey with us today." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rrinstitute.in" />
+        <meta property="og:image" content="https://rrinstitute.in/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RR Institute Karnal | Expert Immigration & Visa Consultants" />
+        <meta name="twitter:description" content="Start your global journey with Karnal's most trusted visa experts." />
+        <meta name="twitter:image" content="https://rrinstitute.in/logo.png" />
+        <link rel="canonical" href="https://rrinstitute.in" />
+
+        {/* Local Business Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "RR Institute Karnal",
+            "image": "https://rrinstitute.in/logo.png",
+            "@id": "https://rrinstitute.in",
+            "url": "https://rrinstitute.in",
+            "telephone": "+918398093616",
+            "email": "info@rrinstitute.in",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Opp. Civil Hospital",
+              "addressLocality": "Karnal",
+              "addressRegion": "HR",
+              "postalCode": "132001",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.695325,
+              "longitude": 76.991336
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/rrinstitutekarnal/"
+            ]
+          })}
+        </script>
       </Helmet>
       <Navbar />
 

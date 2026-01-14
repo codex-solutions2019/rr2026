@@ -10,7 +10,12 @@ const About = () => {
         <div className="min-h-screen bg-white">
             <Helmet>
                 <title>About Us | RR Institute Karnal - Our Mission & Vision</title>
-                <meta name="description" content="Learn about RR Institute Karnal, the most trusted immigration and visa consultancy in Haryana. Our mission is to provide expert guidance for your global journey." />
+                <meta name="description" content="Learn about RR Institute Karnal, the most trusted immigration and visa consultancy in Karnal. Our goal is to empower your dreams with expert guidance." />
+                <meta property="og:title" content="About Us | RR Institute Karnal" />
+                <meta property="og:description" content="Discover our story, mission, and why students trust us for their global career." />
+                <meta property="og:url" content="https://rrinstitute.in/about" />
+                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
+                <link rel="canonical" href="https://rrinstitute.in/about" />
             </Helmet>
 
             <Navbar />

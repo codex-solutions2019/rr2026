@@ -11,6 +11,11 @@ const CoursePage = ({ title, subtitle, duration, eligibility, description, conte
             <Helmet>
                 <title>{title} | RR Institute Karnal - Nursing Excellence</title>
                 <meta name="description" content={`Join the ${title} course at RR Institute Karnal. ${description}`} />
+                <meta property="og:title" content={`${title} | RR Institute Karnal`} />
+                <meta property="og:description" content={`Start your career in nursing with our ${title} program.`} />
+                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
+                <meta property="og:url" content={`https://rrinstitute.in/bsc-nursing`} />
+                <link rel="canonical" href={`https://rrinstitute.in/bsc-nursing`} />
             </Helmet>
 
             <Navbar />

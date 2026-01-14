@@ -9,8 +9,13 @@ const CoursePage = ({ title, subtitle, duration, eligibility, description, conte
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-                <title>{title} | RR Institute Karnal - Paramedical Excellence</title>
-                <meta name="description" content={`Explore ${title} courses at RR Institute Karnal. ${description}`} />
+                <title>{title} | RR Institute Karnal - Excellence in Health Sciences</title>
+                <meta name="description" content={`Join the ${title} course at RR Institute Karnal. ${description}`} />
+                <meta property="og:title" content={`${title} | RR Institute Karnal`} />
+                <meta property="og:description" content={`Start your career in health sciences with our ${title} program.`} />
+                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
+                <meta property="og:url" content={`https://rrinstitute.in/paramedical`} />
+                <link rel="canonical" href={`https://rrinstitute.in/paramedical`} />
             </Helmet>
 
             <Navbar />

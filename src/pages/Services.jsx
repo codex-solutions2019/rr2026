@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import {
     BookOpen, Globe, Award, Shield,
     MapPin, Clock, Headphones, CheckCircle, ArrowRight
@@ -57,15 +56,7 @@ const Services = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Helmet>
-                <title>Our Services | RR Institute Karnal - Visas, PR & Coaching</title>
-                <meta name="description" content="Explore our wide range of services including Study Visas, PR, IELTS/PTE coaching, and career counseling at RR Institute Karnal." />
-                <meta property="og:title" content="Our Services | RR Institute Karnal" />
-                <meta property="og:description" content="From Study Visas to PR and Coaching, we have you covered." />
-                <meta property="og:url" content="https://rrinstitute.in/services" />
-                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
-                <link rel="canonical" href="https://rrinstitute.in/services" />
-            </Helmet>
+
 
             <Navbar />
 

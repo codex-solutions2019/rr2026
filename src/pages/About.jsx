@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Award, Users, Globe } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -8,15 +7,7 @@ import Footer from '../components/Footer';
 const About = () => {
     return (
         <div className="min-h-screen bg-white">
-            <Helmet>
-                <title>About Us | RR Institute Karnal - Our Mission & Vision</title>
-                <meta name="description" content="Learn about RR Institute Karnal, the most trusted immigration and visa consultancy in Karnal. Our goal is to empower your dreams with expert guidance." />
-                <meta property="og:title" content="About Us | RR Institute Karnal" />
-                <meta property="og:description" content="Discover our story, mission, and why students trust us for their global career." />
-                <meta property="og:url" content="https://rrinstitute.in/about" />
-                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
-                <link rel="canonical" href="https://rrinstitute.in/about" />
-            </Helmet>
+
 
             <Navbar />
 

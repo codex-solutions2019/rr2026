@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import {
     Phone, Mail, MapPin, Send, MessageSquare,
     Map as MapIcon, Clock, CheckCircle
@@ -24,15 +23,7 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <Helmet>
-                <title>Contact Us | RR Institute Karnal - Get Your Free Consultation</title>
-                <meta name="description" content="Get in touch with RR Institute Karnal. Visit our office in Karnal or call us at +91 83980 93616 for expert immigration and visa counseling." />
-                <meta property="og:title" content="Contact Us | RR Institute Karnal" />
-                <meta property="og:description" content="Have questions? Reach out to us for 1-on-1 expert guidance." />
-                <meta property="og:url" content="https://rrinstitute.in/contact" />
-                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
-                <link rel="canonical" href="https://rrinstitute.in/contact" />
-            </Helmet>
+
 
             <Navbar />
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { BookOpen, Clock, Award, CheckCircle, ArrowRight, Star, HeartPulse, Activity, Zap, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -8,15 +7,7 @@ import Footer from '../components/Footer';
 const CoursePage = ({ title, subtitle, duration, eligibility, description, content, tags }) => {
     return (
         <div className="min-h-screen bg-white">
-            <Helmet>
-                <title>{title} | RR Institute Karnal - Excellence in Health Sciences</title>
-                <meta name="description" content={`Join the ${title} course at RR Institute Karnal. ${description}`} />
-                <meta property="og:title" content={`${title} | RR Institute Karnal`} />
-                <meta property="og:description" content={`Start your career in health sciences with our ${title} program.`} />
-                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
-                <meta property="og:url" content={`https://rrinstitute.in/paramedical`} />
-                <link rel="canonical" href={`https://rrinstitute.in/paramedical`} />
-            </Helmet>
+
 
             <Navbar />
 

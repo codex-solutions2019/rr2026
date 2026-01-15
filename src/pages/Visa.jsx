@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { Globe, Plane, Shield, Award, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -53,15 +52,7 @@ const Visa = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <Helmet>
-                <title>Visa Information | RR Institute Karnal - Study & Work Abroad</title>
-                <meta name="description" content="Detailed information about Study Visas, Tourist Visas, and Permanent Residency for Canada, UK, USA, Australia, and more." />
-                <meta property="og:title" content="Visa Information | RR Institute Karnal" />
-                <meta property="og:description" content="Get the latest visa rules and processes for top study destinations." />
-                <meta property="og:url" content="https://rrinstitute.in/visa" />
-                <meta property="og:image" content="https://rrinstitute.in/logo.png" />
-                <link rel="canonical" href="https://rrinstitute.in/visa" />
-            </Helmet>
+
 
             <Navbar />
 

@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+README.md
+Dockerfile
+.dockerignore
+brain
+task.md
+implementation_plan.md
+walkthrough.md
+keywords.md
+AIinstructions.md

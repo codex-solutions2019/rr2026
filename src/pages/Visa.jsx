@@ -8,11 +8,18 @@ import Footer from '../components/Footer';
 const Visa = () => {
     const visaCategories = [
         {
+            country: 'Malta',
+            title: 'Schengen Work & Study',
+            flag: '🇲🇹',
+            details: 'Malta offers excellent opportunities for work and study in the heart of the Mediterranean. As a Schengen member, it provides easy access to the entire EU. We specialize in work permits and student visa processing for Malta.',
+            image: 'https://images.unsplash.com/photo-1522307617379-e982f8754d27?auto=format&fit=crop&w=1200&q=80'
+        },
+        {
             country: 'Moldova',
             title: 'Europe Entry & PR',
             flag: '🇲🇩',
             details: 'Moldova is becoming a preferred gateway to Europe. We provide end-to-end assistance for work permits, residency, and study visas for Moldova.',
-            image: 'https://images.unsplash.com/photo-1533923055331-482434fa5f86?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1629045951640-fb182dba0a33?auto=format&fit=crop&w=1200&q=80'
         },
         {
             country: 'Canada',

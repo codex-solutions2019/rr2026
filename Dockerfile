@@ -5,17 +5,21 @@ WORKDIR /app
 
 COPY . .
 
-
 RUN npm install
-
 RUN npm run build
 
 # Production stage
-FROM nginx:stable-alpine
+FROM node:18-alpine
 
+WORKDIR /app
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Install 'serve' package for static file hosting
+RUN npm install -g serve
+
+# Copy built assets from build stage
+COPY --from=build /app/dist ./dist
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+# Serve the 'dist' folder on port 80 with SPA support (-s flag)
+CMD ["serve", "-s", "dist", "-l", "80"]

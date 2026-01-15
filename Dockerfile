@@ -13,13 +13,16 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Install 'serve' package for static file hosting
+# Install 'serve' package
 RUN npm install -g serve
 
-# Copy built assets from build stage
+# Copy built assets
 COPY --from=build /app/dist ./dist
 
-EXPOSE 80
+# Create a serve.json for SPA routing inside the container
+RUN echo '{"rewrites": [{"source": "**", "destination": "/index.html"}]}' > ./dist/serve.json
 
-# Serve the 'dist' folder on port 80 with SPA support (-s flag)
-CMD ["serve", "-s", "dist", "-l", "80"]
+EXPOSE 3000
+
+# Bind to 0.0.0.0 on port 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
